@@ -8,7 +8,38 @@ console.log(date);
 let hr = date.getHours();
 let min = date.getMinutes();
 let secs = date.getSeconds();
-console.log("Hours " + hr + " Minutes " + min + " Seconds" + secs);
+let millisecs = date.getMilliseconds();
+console.log("Hours " + hr + " Minutes " + min + " Seconds" + secs + " milliseconds " + millisecs);
+
+let day = date.getDay();
+
+switch (day) {
+    case 0:
+        document.getElementById("dateText").innerHTML = "SUN";
+        break;
+    case 1:
+        document.getElementById("dateText").innerHTML = "MON";
+        break;
+    case 2:
+        document.getElementById("dateText").innerHTML = "TUE";
+        break;  
+    case 3:
+        document.getElementById("dateText").innerHTML = "WED";
+        break; 
+    case 4:
+        document.getElementById("dateText").innerHTML = "THU";
+        break; 
+    case 5:
+        document.getElementById("dateText").innerHTML = "FRI";
+        break; 
+    case 6:
+        document.getElementById("dateText").innerHTML = "SAT";
+        break; 
+    default:
+        console.log(day);
+        break;
+}
+
 
 let hrPosition = hr*360/12 + (min*(360/60)/12);
 let minPosition = min*360/60 + (secs*(360/60)/60);
