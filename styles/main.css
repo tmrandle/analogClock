@@ -1,4 +1,7 @@
 /* Layout */
+body{
+    background-color: rgb(186, 187, 189);
+}
 .main {
     display: flex;
     padding: 2em;
@@ -7,9 +10,25 @@
     align-items: middle;
 }
 
+.header{
+    width: 35%;
+    padding: 0px 20px;
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: middle;
+}
+
+.header p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .clockbox,
 #clock {
-    width: 100%;
+    width: 65%;
+    padding: 0px 20px;
 }
 
 /* Clock styles */
@@ -29,6 +48,11 @@
     stroke: #000;
     stroke-width: 9;
     stroke-miterlimit: 10;
+}
+
+#numbers{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 34px;
 }
 
 .hour-arm {
