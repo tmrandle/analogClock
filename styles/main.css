@@ -14,10 +14,11 @@
 
 /* Clock styles */
 .circle {
-    fill: none;
+    fill: rgb(246, 228, 124);
     stroke: rgb(165, 21, 21);
     stroke-width: 9;
     stroke-miterlimit: 10;
+    
 }
 
 .mid-circle {
@@ -32,9 +33,10 @@
 
 .hour-arm {
     fill: none;
-    stroke: #000;
+    stroke: rgb(2, 2, 2);
     stroke-width: 17;
     stroke-miterlimit: 10;
+    stroke-linecap: round;
 }
 
 .minute-arm {
@@ -42,6 +44,7 @@
     stroke: #000;
     stroke-width: 11;
     stroke-miterlimit: 10;
+    stroke-linecap: round;
 }
 
 .second-arm {
@@ -49,6 +52,7 @@
     stroke: #000;
     stroke-width: 4;
     stroke-miterlimit: 10;
+    stroke-linecap: round;
 }
 
 /* Transparent box ensuring arms center properly. */
@@ -62,5 +66,5 @@
 #minute,
 #second {
     transform-origin: 300px 300px;
-    /* transition: transform .5s ease-in-out; */
+    transition: transform .5s ease-in-out; 
 }
