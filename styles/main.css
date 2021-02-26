@@ -4,21 +4,20 @@ body{
 }
 .main {
     display: flex;
-    padding: 2em;
+    padding: 1em;
     height: 90vh;
+    flex-flow: column nowrap;
     justify-content: center;
-    align-items: middle;
+    align-items: center;
 }
 
 .header{
-    width: 35%;
-    padding: 0px 20px;
-    font-size: 18px;
+    width: 100%;
+    padding: 0px 5px;
+    font-size: .75em;
+    text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: middle;
+    order: 2;
 }
 
 .header p{
@@ -27,8 +26,9 @@ body{
 
 .clockbox,
 #clock {
-    width: 65%;
-    padding: 0px 20px;
+    width: 100%;
+    padding: 5px;
+    order: 1;
 }
 
 /* Clock styles */
