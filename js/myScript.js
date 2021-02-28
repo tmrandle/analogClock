@@ -9,7 +9,25 @@ let hr = date.getHours();
 let min = date.getMinutes();
 let secs = date.getSeconds();
 let millisecs = date.getMilliseconds();
-console.log("Hours " + hr + " Minutes " + min + " Seconds" + secs + " milliseconds " + millisecs);
+console.log("Hours " + hr + " Minutes " + min + " Seconds " + secs + " milliseconds " + millisecs);
+
+let hrPosition = hr*360/12 + (min*(360/60)/12);
+let minPosition = min*360/60 + (secs*(360/60)/60);
+let secPosition = secs*360/60;
+
+function movingClock(){
+    //this first math section moves the hands one second so the clock isn't behind one sec
+    //since I moved the get times and set positions outside the function.
+    hrPosition = hrPosition + (3/360);
+    minPosition = minPosition + (6/60);
+    secPosition = secPosition + 6;
+    
+    HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
+    MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
+    SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
+}
+
+var interval = setInterval(movingClock, 1000);
 
 let day = date.getDay();
 
@@ -39,24 +57,5 @@ switch (day) {
         console.log(day);
         break;
 }
-
-
-let hrPosition = hr*360/12 + (min*(360/60)/12);
-let minPosition = min*360/60 + (secs*(360/60)/60);
-let secPosition = secs*360/60;
-
-function movingClock(){
-    //this first math section moves the hands one second so the clock isn't behind one sec
-    //since I moved the get times and set positions outside the function.
-    hrPosition = hrPosition + (3/360);
-    minPosition = minPosition + (6/60);
-    secPosition = secPosition + 6;
-    
-    HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
-    MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
-    SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
-}
-
-var interval = setInterval(movingClock, 1000);
 
 
