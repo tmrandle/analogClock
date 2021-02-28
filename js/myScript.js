@@ -46,9 +46,12 @@ let minPosition = min*360/60 + (secs*(360/60)/60);
 let secPosition = secs*360/60;
 
 function movingClock(){
+    //this first math section moves the hands one second so the clock isn't behind one sec
+    //since I moved the get times and set positions outside the function.
     hrPosition = hrPosition + (3/360);
     minPosition = minPosition + (6/60);
     secPosition = secPosition + 6;
+    
     HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
     MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
     SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
